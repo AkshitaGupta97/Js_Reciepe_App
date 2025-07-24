@@ -22,6 +22,8 @@ header nav {
     z-index: 2;
 }
 header nav h1 {
+    border-bottom: 3px solid orange;
+    border-radius: 3px;
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -52,7 +54,7 @@ form button[type="submit"] {
     transition: background-color 0.2s ease-in-out;
 }
 form button[type="submit"]:hover {
-    background-color: rgb(252, 136, 94);
+    background-color: rgb(228, 190, 35);
 }
 
 @media screen and (max-width:600px) {
@@ -85,12 +87,53 @@ form button[type="submit"]:hover {
     flex-direction: column;
     border-radius: 6px;
     color: rgb(194, 67, 88);
-    box-shadow: 10px -8px 12px rgb(143, 130, 130);
-    
+    box-shadow: 0 5px 10px rgb(143, 130, 130),  -5px -5px 10px rgb(143, 130, 130);
+    cursor: pointer;
+    max-width: 250px;
+    padding: 10px;
+
 }
 .recipe-content p {
     color: black;
+    margin: 5px 0;
+}
+.recipe-content span {
+    font-weight: 600;
+}
+.recipe-content h3 {
+    margin-block: 5px;
 }
 .recipe-content img {
     border-radius: 5px;
+    height: 200px;
+}
+.recipe-content button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px auto;
+    background-color: rgb(244, 175, 48);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.recipe-content button:hover {
+    background-color: rgb(205, 149, 6);
+}
+
+.recipe-detail-pop {  /* i want to display it fixed and in center*/
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(237, 174, 59);
+    border-radius: 10px;
+    width: 60%;
+    height: 40%;
+    font-size: 16px;
+    padding: 12px;
+
+    -webkit-transform: translate(-50%, -50%);
 }
