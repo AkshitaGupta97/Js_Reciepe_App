@@ -91,8 +91,12 @@ form button[type="submit"]:hover {
     cursor: pointer;
     max-width: 250px;
     padding: 10px;
-
+    transition: transform 0.3s ease-in-out;
 }
+.recipe-content:hover{
+    transform: scale(1.04);
+    
+} 
 .recipe-content p {
     color: black;
     margin: 5px 0;
@@ -130,10 +134,78 @@ form button[type="submit"]:hover {
     transform: translate(-50%, -50%);
     background-color: rgb(237, 174, 59);
     border-radius: 10px;
-    width: 60%;
-    height: 40%;
+    width: 40%;
+    height: 50%;
     font-size: 16px;
-    padding: 12px;
+    padding: 10px;
 
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;    
     -webkit-transform: translate(-50%, -50%);
+}
+
+/*  Adding scroll bar to reciepe datail pop up*/
+
+.recipe-detail-pop::-webkit-scrollbar {
+    width: 10px;
+}
+.recipe-detail-pop::-webkit-scrollbar-thumb {
+    background-color: rgb(95, 2, 17, 0.5);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+}
+
+.recipe-detail-content {
+    padding: 20px 30px;
+}
+
+.recipe-head {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: rgb(218, 54, 81);
+    margin-bottom: 16px;
+}
+#ingredientList {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.recipe-topic {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: underline;
+
+}
+.recipe-instruction {
+    line-height: 30px;
+}
+
+.close-pop-btn {
+    border: none;
+    background-color: rgb(123, 4, 24);
+    padding: 3px;
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    cursor: pointer;
+}
+.close-pop-btn:hover {
+    background-color: rgb(171, 67, 86);
+}
+
+/*  scroll bar on body tag      */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{  /* thumb is samller part*/
+    background-color: rgb(177, 62, 62);
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-track {  /* track is whole length*/
+    background-color: rgb(245, 202, 209, 0.4);
 }
